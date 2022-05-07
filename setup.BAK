@@ -1,0 +1,4 @@
+SET DEFAULT TO 'D:\Arquivos\Projetos Tabaco\Tagmar'
+SET PATH TO code ; data ; form ; menu ; report ; imgs 
+_screen.BackColor = RGB(32,32,32)
+*MODIFY PROJECT Tagmar

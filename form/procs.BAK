@@ -1,0 +1,47 @@
+** Retorna ARRAY de STRING com separador ";", deve ter ";" no final da string.
+
+PROCEDURE split
+	LPARAMETERS s_string, a_return
+	*LOCAL ARRAY a_return[1]
+	LOCAL a_dim as Integer
+	LOCAL str_pointer as Integer
+	LOCAL res_at as Integer
+	LOCAL s_final as Integer
+	a_dim = OCCURS(';', s_string)
+	IF EMPTY(a_dim)
+		RETURN
+	ENDIF
+	DIMENSION a_return[a_dim]
+	str_pointer = 1
+	FOR x = 1 TO a_dim
+		res_at = AT(';', s_string, x)
+		s_final = res_at - str_pointer
+		a_return[x] = SUBSTR(s_string, str_pointer, s_final)
+		*MESSAGEBOX(a_return[x] ,0,'teste')
+		str_pointer = str_pointer + s_final + 1
+	ENDFOR	
+ENDPROC
+
+*!*	FUNCTION split
+*!*		LPARAMETERS s_string
+*!*		LOCAL ARRAY a_return[1]
+*!*		LOCAL a_dim as Integer
+*!*		LOCAL str_pointer as Integer
+*!*		LOCAL res_at as Integer
+*!*		LOCAL s_final as Integer
+*!*		a_dim = OCCURS(';', s_string)
+*!*		IF EMPTY(a_dim)
+*!*			RETURN a_return
+*!*		ENDIF
+*!*		DIMENSION a_return[a_dim]
+*!*		str_pointer = 1
+*!*		FOR x = 1 TO a_dim
+*!*			res_at = AT(';', s_string, x)
+*!*			s_final = res_at - str_pointer
+*!*			a_return[x] = SUBSTR(s_string, str_pointer, s_final)
+*!*			*MESSAGEBOX(a_return[x] ,0,'teste')
+*!*			str_pointer = str_pointer + s_final + 1
+*!*		ENDFOR	
+*!*		RETURN a_return
+*!*	ENDFUNC 
+
