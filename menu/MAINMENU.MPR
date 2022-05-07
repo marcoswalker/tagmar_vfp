@@ -1,6 +1,6 @@
 *       *********************************************************
 *       *                                                         
-*       * 07/05/2022           MAINMENU.MPR             17:42:52  
+*       * 07/05/2022           MAINMENU.MPR             19:07:01  
 *       *                                                         
 *       *********************************************************
 *       *                                                         
@@ -26,9 +26,12 @@
 SET SYSMENU TO
 SET SYSMENU AUTOMATIC
 
-DEFINE PAD _6bt11yv2m OF _MSYSMENU PROMPT "Cadastros" COLOR SCHEME 3 ;
+DEFINE PAD _6bt14z2wt OF _MSYSMENU PROMPT "Cadastros" COLOR SCHEME 3 ;
 	KEY ALT+C, ""
-ON PAD _6bt11yv2m OF _MSYSMENU ACTIVATE POPUP cadastros
+DEFINE PAD _6bt14z2wu OF _MSYSMENU PROMPT "Ajuda" COLOR SCHEME 3 ;
+	KEY ALT+A, ""
+ON PAD _6bt14z2wt OF _MSYSMENU ACTIVATE POPUP cadastros
+ON PAD _6bt14z2wu OF _MSYSMENU ACTIVATE POPUP ajuda
 
 DEFINE POPUP cadastros MARGIN RELATIVE SHADOW COLOR SCHEME 4
 DEFINE BAR 1 OF cadastros PROMPT "Raças"
@@ -41,32 +44,38 @@ DEFINE BAR 7 OF cadastros PROMPT "Pertences"
 DEFINE BAR 8 OF cadastros PROMPT "\-"
 DEFINE BAR 9 OF cadastros PROMPT "Sair"
 ON SELECTION BAR 1 OF cadastros ;
-	DO _6bt11yv2n ;
+	DO _6bt14z2wv ;
 	IN LOCFILE("TAGMAR\MENU\MAINMENU" ,"MPX;MPR|FXP;PRG" ,"WHERE is MAINMENU?")
 ON SELECTION BAR 2 OF cadastros ;
-	DO _6bt11yv2o ;
+	DO _6bt14z2ww ;
 	IN LOCFILE("TAGMAR\MENU\MAINMENU" ,"MPX;MPR|FXP;PRG" ,"WHERE is MAINMENU?")
 ON SELECTION BAR 3 OF cadastros ;
-	DO _6bt11yv2p ;
+	DO _6bt14z2wx ;
 	IN LOCFILE("TAGMAR\MENU\MAINMENU" ,"MPX;MPR|FXP;PRG" ,"WHERE is MAINMENU?")
 ON SELECTION BAR 4 OF cadastros ;
-	DO _6bt11yv2q ;
+	DO _6bt14z2wy ;
 	IN LOCFILE("TAGMAR\MENU\MAINMENU" ,"MPX;MPR|FXP;PRG" ,"WHERE is MAINMENU?")
 ON SELECTION BAR 5 OF cadastros ;
-	DO _6bt11yv2r ;
+	DO _6bt14z2wz ;
 	IN LOCFILE("TAGMAR\MENU\MAINMENU" ,"MPX;MPR|FXP;PRG" ,"WHERE is MAINMENU?")
 ON SELECTION BAR 6 OF cadastros ;
-	DO _6bt11yv2s ;
+	DO _6bt14z2x0 ;
 	IN LOCFILE("TAGMAR\MENU\MAINMENU" ,"MPX;MPR|FXP;PRG" ,"WHERE is MAINMENU?")
 ON SELECTION BAR 7 OF cadastros ;
-	DO _6bt11yv2t ;
+	DO _6bt14z2x1 ;
 	IN LOCFILE("TAGMAR\MENU\MAINMENU" ,"MPX;MPR|FXP;PRG" ,"WHERE is MAINMENU?")
 ON SELECTION BAR 9 OF cadastros do cleanup in main
+
+DEFINE POPUP ajuda MARGIN RELATIVE SHADOW COLOR SCHEME 4
+DEFINE BAR 1 OF ajuda PROMPT "Sobre"
+ON SELECTION BAR 1 OF ajuda ;
+	DO _6bt14z2x2 ;
+	IN LOCFILE("TAGMAR\MENU\MAINMENU" ,"MPX;MPR|FXP;PRG" ,"WHERE is MAINMENU?")
 
 
 *       *********************************************************
 *       *                                                         
-*       * _6BT11YV2N  ON SELECTION BAR 1 OF POPUP cadastros       
+*       * _6BT14Z2WV  ON SELECTION BAR 1 OF POPUP cadastros       
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -77,7 +86,7 @@ ON SELECTION BAR 9 OF cadastros do cleanup in main
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _6bt11yv2n
+PROCEDURE _6bt14z2wv
 LOCAL sim as Integer
 sim = 0
 IF _screen.formCount>=1
@@ -94,7 +103,7 @@ ENDIF
 
 *       *********************************************************
 *       *                                                         
-*       * _6BT11YV2O  ON SELECTION BAR 2 OF POPUP cadastros       
+*       * _6BT14Z2WW  ON SELECTION BAR 2 OF POPUP cadastros       
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -105,7 +114,7 @@ ENDIF
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _6bt11yv2o
+PROCEDURE _6bt14z2ww
 LOCAL sim as Integer
 sim = 0
 IF _screen.formCount>=1
@@ -122,7 +131,7 @@ ENDIF
 
 *       *********************************************************
 *       *                                                         
-*       * _6BT11YV2P  ON SELECTION BAR 3 OF POPUP cadastros       
+*       * _6BT14Z2WX  ON SELECTION BAR 3 OF POPUP cadastros       
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -133,7 +142,7 @@ ENDIF
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _6bt11yv2p
+PROCEDURE _6bt14z2wx
 LOCAL sim as Integer
 sim = 0
 IF _screen.formCount>=1
@@ -150,7 +159,7 @@ ENDIF
 
 *       *********************************************************
 *       *                                                         
-*       * _6BT11YV2Q  ON SELECTION BAR 4 OF POPUP cadastros       
+*       * _6BT14Z2WY  ON SELECTION BAR 4 OF POPUP cadastros       
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -161,7 +170,7 @@ ENDIF
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _6bt11yv2q
+PROCEDURE _6bt14z2wy
 LOCAL sim as Integer
 sim = 0
 IF _screen.formCount>=1
@@ -178,7 +187,7 @@ ENDIF
 
 *       *********************************************************
 *       *                                                         
-*       * _6BT11YV2R  ON SELECTION BAR 5 OF POPUP cadastros       
+*       * _6BT14Z2WZ  ON SELECTION BAR 5 OF POPUP cadastros       
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -189,7 +198,7 @@ ENDIF
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _6bt11yv2r
+PROCEDURE _6bt14z2wz
 LOCAL sim as Integer
 sim = 0
 IF _screen.formCount>=1
@@ -206,7 +215,7 @@ ENDIF
 
 *       *********************************************************
 *       *                                                         
-*       * _6BT11YV2S  ON SELECTION BAR 6 OF POPUP cadastros       
+*       * _6BT14Z2X0  ON SELECTION BAR 6 OF POPUP cadastros       
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -217,7 +226,7 @@ ENDIF
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _6bt11yv2s
+PROCEDURE _6bt14z2x0
 LOCAL sim as Integer
 sim = 0
 IF _screen.formCount>=1
@@ -234,7 +243,7 @@ ENDIF
 
 *       *********************************************************
 *       *                                                         
-*       * _6BT11YV2T  ON SELECTION BAR 7 OF POPUP cadastros       
+*       * _6BT14Z2X1  ON SELECTION BAR 7 OF POPUP cadastros       
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -245,7 +254,7 @@ ENDIF
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _6bt11yv2t
+PROCEDURE _6bt14z2x1
 LOCAL sim as Integer
 sim = 0
 IF _screen.formCount>=1
@@ -256,5 +265,33 @@ ENDIF
 
 IF EMPTY(sim)
 	DO FORM listPertences
+ENDIF
+
+
+
+*       *********************************************************
+*       *                                                         
+*       * _6BT14Z2X2  ON SELECTION BAR 1 OF POPUP ajuda           
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  MAINMENU.MPR,            Record:   16       
+*       * Called By:  ON SELECTION BAR 1 OF POPUP ajuda           
+*       * Prompt:     Sobre                                       
+*       * Snippet:    8                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _6bt14z2x2
+LOCAL sim as Integer
+sim = 0
+IF _screen.formCount>=1
+ FOR i = 1 TO _screen.formCount
+   sim = sim + IIF(LOWER(_screen.forms(i).name) = 'sobre', 1, 0)
+ ENDFOR
+ENDIF
+
+IF EMPTY(sim)
+	DO FORM sobre
 ENDIF
 
