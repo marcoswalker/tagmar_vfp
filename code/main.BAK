@@ -3,7 +3,9 @@
 _screen.WindowState = 2
 _screen.Caption = "Fichas Tagmar"
 _screen.BackColor = RGB(32,32,32)
-_screen.Icon = 'imgs\favicon.ico'
+_screen.Icon = 'imgs\icon.ico'
+_screen.SetAll('FontSize', 10)
+_screen.SetAll('FontName', 'Arial')
 SET PATH TO code ; data ; form ; menu ; report ; imgs 
 ON SHUTDOWN DO cleanup in main.prg
 SET TALK OFF 
