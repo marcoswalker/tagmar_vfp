@@ -6,9 +6,9 @@ Cadastre raças, profissões, técnicas, magias, ataques e pertences customizado
 Baixe 'tagmar-fichas.zip' na última versão disponível na sessão [Releases](https://github.com/marcoswalker/tagmar_vfp/releases), extrair e executar tagmar.exe.
 
 ### Código Fonte
-Microsoft Visual FoxPro 9.0 SP2
-Modificar caminho do projeto e executar 'setup.prg'.
-Disponível para uso não comercial.
+* Microsoft Visual FoxPro 9.0 SP2
+* Modificar caminho do projeto e executar 'setup.prg'.
+* Disponível para uso não comercial.
 	
 # Tagmar RPG
-Coneça o projeto [Tagmar RPG](https://tagmar.com.br/)
+Conheça o projeto [Tagmar RPG](https://tagmar.com.br/)
